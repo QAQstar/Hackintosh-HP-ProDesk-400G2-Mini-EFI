@@ -16,9 +16,7 @@
 |  BIOS  |             N23 Ver.A             |
 |  引导  |          OpenCore 0.7.4           |
 
-### 已实现
-
----
+## 已实现
 
 * CPU睿频变频正常
 * 核显硬解正常
@@ -27,26 +25,20 @@
 * 有线/无线网卡正常
 * 蓝牙正常
 
-### 未实现
-
----
+## 未实现
 
 * 未注入三码
 * 麦克风无法正常工作
 * 睡眠问题
 
-### BIOS设置
-
----
+## BIOS设置
 
 * 关闭Secure Boot
 * 关闭Fast Boot
 * 关闭VT-d
 * 显存分配至少为64MB
 
-### 参考
-
----
+## 参考
 
 * [july929/Hackintosh-Hp-Prodesk-400G2-DM-EFI](https://github.com/july929/Hackintosh-Hp-Prodesk-400G2-DM-EFI)
 * [toshinori8/HP-ProDesk-400-G2-DM](https://github.com/toshinori8/HP-ProDesk-400-G2-DM)
