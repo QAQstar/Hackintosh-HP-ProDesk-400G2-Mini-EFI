@@ -42,11 +42,11 @@
 4. 输入`python macrecovery.py -b Mac-E43C1C25D4880AD6 -m 00000000000000000 download`（需要python3环境），等待下载完成后在该目录下得到`BaseSystem.dmg`和`BaseSystem.chunklist`两个文件
 5. 下载我的`EFI`文件，若核显不是HD530，则需要到[Intel核显platform ID整理](https://blog.daliansky.net/Intel-core-display-platformID-finishing.html)中找到你核显对应的`platform-id`，并替换`EFI/OC/config.plist`文件中的`Root/DeviceProperties/Add/PciRoot(0x0)/Pci(0x2,0x0)/device-id`项；并将`Root/DeviceProperties/Add/PciRoot(0x0)/Pci(0x2,0x0)/AAPL,ig-platform-id`项修改为`platform-id`的反转字节形式（如`platform-id`为`3EA50009`，则`AAPL,ig-platform-id`项修改为`0900A53E`）
 6. 准备一个至少4GB的U盘，最好是USB3.0的，格式化成FAT32文件系统，将第4步中准备好的`EFI`文件夹拷贝到U盘根目录和硬盘的引导分区
-7. 在U盘根目录下创建`com.apple.recovery.boot`文件夹，并拷贝`BaseSystem.dmg`和`BaseSystem.chunklist`到该文件夹中；在`BaseSystem.chunklist`文件夹中创建`.contentDetails`文件，文件内容为`macOS Recovery`
+7. 在U盘根目录下创建`com.apple.recovery.boot`文件夹，并拷贝`BaseSystem.dmg`和`BaseSystem.chunklist`到该文件夹中；在`com.apple.recovery.boot`文件夹中创建`.contentDetails`文件，文件内容为`macOS Recovery`
 8. 将U盘插入到主机上，选择U盘启动，在看到引导界面时按下空格，选择`macOS Recovery`启动项
 9. 点击`磁盘工具`，将第1步中的空闲分区格式化成APFS格式，然后退出磁盘工具
 10. 点击`重新安装macOS`，并将macOS安装到第9步创建的分区中，等待安装过程
-11. 结束安装后，从硬盘启动即可进入到macOS，注意不要登录Apple ID，使用工具为你的黑苹果注入三码后再登录
+11. 结束安装后，从硬盘启动即可进入到macOS，注意不要登录Apple ID，参考[国光的PlatformInfo配置说明](https://apple.sqlsec.com/4-OC配置/4-7.html)，注入三码后再登录
 
 ## 已实现
 
@@ -57,7 +57,7 @@
 * 有线/无线网卡正常，蓝牙正常，隔空投送正常，屏幕镜像正常
 * DP接口4K60Hz输出正常，音频输出正常
 * 3.5mm接口声音输出正常
-* 主动DP转HDMI转换器工作正常
+* DP转HDMI主动转换器工作正常
 
 ## 未实现
 
@@ -65,8 +65,8 @@
 
 ## 未详细测试
 
-* 睡眠问题
-* 使用被动DP转HDMI转换器在1080P分辨率下正常，在2K分辨率及以上分辨率下可能会出现闪屏问题（在我的一台显示器上会闪，另一台则不会），也有可能是我的转换器本身有问题
+* 使用DP转HDMI被动转换器在1080P分辨率下正常，在2K分辨率及以上分辨率下可能会出现闪屏问题（在我的一台显示器上会闪，另一台则不会），也有可能是我的转换器本身有问题
+* 睡眠问题，在使用DP转HDMi被动转换器时可能出现黑屏问题，其他情况下有待测试
 * 2.4G Wi-Fi和蓝牙同时使用存在干扰，据说换其他的免驱网卡可解决
 
 ## BIOS设置
