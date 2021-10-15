@@ -89,5 +89,5 @@
 * [OpenCore 简体中文参考手册](https://oc.skk.moe)
 * [哔哩哔哩 机汤TV](https://space.bilibili.com/485711932)
 * [哔哩哔哩 国光_](https://space.bilibili.com/112842166)
-* [大头蔡Cass](https://space.bilibili.com/16323318)
+* [哔哩哔哩 大头蔡Cass](https://space.bilibili.com/16323318)
 
