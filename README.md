@@ -25,7 +25,7 @@
 |  网卡  |     RTL8111H/BCM943224PCIEBT2     |
 |  声卡  |          Realtek ALC221           |
 | SMBIOS |          Mac mini (2018)          |
-|  BIOS  |             N23 Ver.A             |
+|  BIOS  |           N23 Ver 02.53           |
 |  引导  |          OpenCore 0.7.4           |
 
 系统：macOS Big Sur 11.6
