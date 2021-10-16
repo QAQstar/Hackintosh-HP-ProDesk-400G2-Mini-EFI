@@ -96,13 +96,13 @@
 ## 未详细测试
 
 * 使用DP转HDMI被动转换器在1080P分辨率下正常，在2K分辨率及以上分辨率下可能会出现闪屏问题（在我的一台显示器上会闪，另一台则不会），也有可能是我的转换器本身有问题
-* 2.4G Wi-Fi和蓝牙同时使用存在干扰，据说换其他的免驱网卡可解决
+* 2.4G Wi-Fi和蓝牙同时使用可能存在干扰，据说换其他的免驱网卡可解决
 
 ## BIOS设置
 
 * 关闭Secure Boot
 * 关闭Fast Boot
-* 关闭VT-d
+* 关闭VT-d，或在`config.plist`中将`Root/Kernel/Quirks/DisableIoMapper`项设为`True`
 * 显存分配至少为64MB
 
 ## 截图
