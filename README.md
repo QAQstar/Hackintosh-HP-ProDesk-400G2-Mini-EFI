@@ -42,7 +42,7 @@
 
 3. 进入目录`OpenCore-0.7.4-RELEASE/Utilities/macrecovery/`，在该目录中运行cmd，输入`python macrecovery.py -b Mac-E43C1C25D4880AD6 -m 00000000000000000 download`（需要python3环境），等待下载完成后在该目录下得到`BaseSystem.dmg`和`BaseSystem.chunklist`两个文件
 
-4. 下载我的`EFI`文件，若核显不是HD530，则需要到[Intel核显platform ID整理](https://blog.daliansky.net/Intel-core-display-platformID-finishing.html)中找到你核显对应的`platform-id`，并替换`EFI/OC/config.plist`文件中的`Root/DeviceProperties/Add/PciRoot(0x0)/Pci(0x2,0x0)/device-id`项；并将`Root/DeviceProperties/Add/PciRoot(0x0)/Pci(0x2,0x0)/AAPL,ig-platform-id`项修改为`platform-id`的反转字节形式（如`platform-id`为`3EA50009`，则`AAPL,ig-platform-id`项修改为`0900A53E`）
+4. 下载Releases中的的`EFI`文件，并解压到本地。若核显不是HD530，则需要到[Intel核显platform ID整理](https://blog.daliansky.net/Intel-core-display-platformID-finishing.html)中找到你核显对应的`platform-id`，并替换`EFI/OC/config.plist`文件中的`Root/DeviceProperties/Add/PciRoot(0x0)/Pci(0x2,0x0)/device-id`项；并将`Root/DeviceProperties/Add/PciRoot(0x0)/Pci(0x2,0x0)/AAPL,ig-platform-id`项修改为`platform-id`的反转字节形式（如`platform-id`为`3EA50009`，则`AAPL,ig-platform-id`项修改为`0900A53E`）
 
 5. 准备一个至少4GB的U盘，最好是USB3.0的，格式化成FAT32文件系统，将第4步中准备好的`EFI`文件夹拷贝到U盘根目录和硬盘的引导分区
 
@@ -69,7 +69,13 @@
 
 10. 点击`重新安装macOS`，并将macOS安装到第9步创建的分区中，等待安装过程
 
-11. 结束安装后，从硬盘启动即可进入到macOS，注意不要登录Apple ID，参考[国光的PlatformInfo配置说明](https://apple.sqlsec.com/4-OC配置/4-7.html)，注入三码后再登录
+11. 结束安装后，从硬盘启动即可进入到macOS，注意不要登录Apple ID，还需要注入新的三码，可参考[OpenCore生成三码](https://heipg.cn/tutorial/macserial-and-iservice-opencore.html)和[国光的PlatformInfo配置说明](https://apple.sqlsec.com/4-OC配置/4-7.html)。完成macOS初始化设置后下载Releases中的`OCC`文件，解压到本地后双击打开；在菜单栏中选中单击应用图标，点击`挂载分区`，输入密码后再点击`打开分区`，进入引导分区；双击打开`EFI/OC/config.plist`文件，在PlatformInfo设置中生成新的三码，并按下`Command+S`或点击左上角`文件-保存`即可。过程可见下图：
+    ![挂载引导分区](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/挂载分区.png)
+    ![打开引导分区](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/打开分区.png)
+    ![打开config.plist文件](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/config文件.png)
+    ![注入新的三码](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/注入三码.png)
+
+12. 重启电脑，在OpenCore引导界面中按下空格，选择`Reset NVRAM`；自动重启后再次进入到macOS系统，即可登录Apple ID
 
 ## 已实现
 
