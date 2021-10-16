@@ -37,14 +37,38 @@
 可参考[国光大佬的macOS安装教程](https://apple.sqlsec.com/5-实战演示/5-5.html)，也可按[OpenCore用户指南上的安装教程](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/)操作。以在Windows 10 x64系统下为例，进行如下步骤操作：
 
 1. 给用于启动的硬盘预留出EFI引导分区（至少200MB），同时预留一部分空闲分区用于macOS
+
 2. 从[OpenCorePkg](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.7.4)中下载`OpenCore-0.7.4-RELEASE.zip`，解压到本地
+
 3. 进入目录`OpenCore-0.7.4-RELEASE/Utilities/macrecovery/`，在该目录中运行cmd，输入`python macrecovery.py -b Mac-E43C1C25D4880AD6 -m 00000000000000000 download`（需要python3环境），等待下载完成后在该目录下得到`BaseSystem.dmg`和`BaseSystem.chunklist`两个文件
-5. 下载我的`EFI`文件，若核显不是HD530，则需要到[Intel核显platform ID整理](https://blog.daliansky.net/Intel-core-display-platformID-finishing.html)中找到你核显对应的`platform-id`，并替换`EFI/OC/config.plist`文件中的`Root/DeviceProperties/Add/PciRoot(0x0)/Pci(0x2,0x0)/device-id`项；并将`Root/DeviceProperties/Add/PciRoot(0x0)/Pci(0x2,0x0)/AAPL,ig-platform-id`项修改为`platform-id`的反转字节形式（如`platform-id`为`3EA50009`，则`AAPL,ig-platform-id`项修改为`0900A53E`）
-6. 准备一个至少4GB的U盘，最好是USB3.0的，格式化成FAT32文件系统，将第4步中准备好的`EFI`文件夹拷贝到U盘根目录和硬盘的引导分区
-7. 在U盘根目录下创建`com.apple.recovery.boot`文件夹，并拷贝`BaseSystem.dmg`和`BaseSystem.chunklist`到该文件夹中；在`com.apple.recovery.boot`文件夹中创建`.contentDetails`文件，文件内容为`macOS Recovery`
+
+4. 下载我的`EFI`文件，若核显不是HD530，则需要到[Intel核显platform ID整理](https://blog.daliansky.net/Intel-core-display-platformID-finishing.html)中找到你核显对应的`platform-id`，并替换`EFI/OC/config.plist`文件中的`Root/DeviceProperties/Add/PciRoot(0x0)/Pci(0x2,0x0)/device-id`项；并将`Root/DeviceProperties/Add/PciRoot(0x0)/Pci(0x2,0x0)/AAPL,ig-platform-id`项修改为`platform-id`的反转字节形式（如`platform-id`为`3EA50009`，则`AAPL,ig-platform-id`项修改为`0900A53E`）
+
+5. 准备一个至少4GB的U盘，最好是USB3.0的，格式化成FAT32文件系统，将第4步中准备好的`EFI`文件夹拷贝到U盘根目录和硬盘的引导分区
+
+6. 在U盘根目录下创建`com.apple.recovery.boot`文件夹，并拷贝`BaseSystem.dmg`和`BaseSystem.chunklist`到该文件夹中；在`com.apple.recovery.boot`文件夹中创建`.contentDetails`文件，文件内容为`macOS Recovery`
+
+7. 此时U盘中目录结构应如下：
+
+    ```
+    .
+    +-- EFI
+    |		 +-- BOOT
+    |		 +-- OC
+    +-- com.apple.recovery.boot
+    |		 +-- BaseSystem.dmg
+    |		 +-- BaseSystem.chunklist
+    |		 +-- .contentDetails
+    ```
+
+    
+
 8. 将U盘插入到主机上，选择U盘启动，在看到引导界面时按下空格，选择`macOS Recovery`启动项
+
 9. 点击`磁盘工具`，将第1步中的空闲分区格式化成APFS格式，然后退出磁盘工具
+
 10. 点击`重新安装macOS`，并将macOS安装到第9步创建的分区中，等待安装过程
+
 11. 结束安装后，从硬盘启动即可进入到macOS，注意不要登录Apple ID，参考[国光的PlatformInfo配置说明](https://apple.sqlsec.com/4-OC配置/4-7.html)，注入三码后再登录
 
 ## 已实现
