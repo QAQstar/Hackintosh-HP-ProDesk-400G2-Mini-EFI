@@ -28,7 +28,7 @@
 |  BIOS  |           N23 Ver 02.53           |
 |  引导  |          OpenCore 0.7.4           |
 
-系统：macOS Big Sur 11.6
+系统：macOS Monterey 12.0.1
 
 ![系统](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/桌面.png)
 
@@ -90,7 +90,7 @@
 
 ## 未实现
 
-* 麦克风无法工作
+* 麦克风无法工作，据说换成
 * 睡眠后唤醒异常
 
 ## 未详细测试
@@ -117,6 +117,7 @@
 * [toshinori8/HP-ProDesk-400-G2-DM](https://github.com/toshinori8/HP-ProDesk-400-G2-DM)
 * [Dortania's OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/)
 * [OpenCore 简体中文参考手册](https://oc.skk.moe)
+* [OpenCore黑苹果引导配置说明](https://shuiyunxc.gitee.io/2020/03/10/instru/index/)
 * [哔哩哔哩 机汤TV](https://space.bilibili.com/485711932)
 * [哔哩哔哩 国光_](https://space.bilibili.com/112842166)
 * [哔哩哔哩 大头蔡Cass](https://space.bilibili.com/16323318)
