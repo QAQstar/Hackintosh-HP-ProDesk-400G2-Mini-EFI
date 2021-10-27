@@ -14,6 +14,12 @@
 
 总之整个折腾黑苹果的过程是非常有意思的。
 
+## 注意事项
+
+* Release中的`EFI_Big Sur.zip`为macOS Big Sur（11.6.x）系统下的引导，`EFI_Monterey.zip`为macOS Monterey（12.0.1）系统下的引导，按需选择；若想使用macOS California（10.15.x），请使用`EFI_Big Sur.zip`并自行测试功能
+* macOS从Big Sur升级到Monterey时，需要替换EFI文件，替换为`EFI_Monterey.zip`，同时清除NVRAM
+* 替换后若蓝牙无法使用，需在关闭电源的前提下插拔一次无线网卡（仅针对BCM943224PCIEBT2，其他网卡自行测试），重新开机即可
+
 ## 配置
 
 |  配置  |               参数                |
@@ -34,7 +40,7 @@
 
 ## 食用方法
 
-可参考[国光大佬的macOS安装教程](https://apple.sqlsec.com/5-实战演示/5-5.html)，也可按[OpenCore用户指南上的安装教程](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/)操作。以在Windows 10 x64系统下为例，进行如下步骤操作：
+可参考[国光大佬的macOS安装教程](https://apple.sqlsec.com/5-实战演示/5-5.html)，也可按[OpenCore用户指南上的安装教程](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/)操作。以在Windows 10 x64系统下安装macOS Big Sur为例，进行如下步骤操作：
 
 1. 给用于启动的硬盘预留出EFI引导分区（至少200MB），同时预留一部分空闲分区用于macOS
 
@@ -42,7 +48,7 @@
 
 3. 进入目录`OpenCore-0.7.4-RELEASE/Utilities/macrecovery/`，在该目录中运行cmd，输入`python macrecovery.py -b Mac-E43C1C25D4880AD6 -m 00000000000000000 download`（需要python3环境），等待下载完成后在该目录下得到`BaseSystem.dmg`和`BaseSystem.chunklist`两个文件
 
-4. 下载Releases中的的`EFI`文件，并解压到本地。若核显不是HD530，则需要到[Intel核显platform ID整理](https://blog.daliansky.net/Intel-core-display-platformID-finishing.html)中找到你核显对应的`platform-id`，并替换`EFI/OC/config.plist`文件中的`Root/DeviceProperties/Add/PciRoot(0x0)/Pci(0x2,0x0)/device-id`项；并将`Root/DeviceProperties/Add/PciRoot(0x0)/Pci(0x2,0x0)/AAPL,ig-platform-id`项修改为`platform-id`的反转字节形式（如`platform-id`为`3EA50009`，则`AAPL,ig-platform-id`项修改为`0900A53E`）
+4. 下载Releases中的的`EFI_Big Sur.zip`文件，并解压到本地。若核显不是HD530，则需要到[Intel核显platform ID整理](https://blog.daliansky.net/Intel-core-display-platformID-finishing.html)中找到你核显对应的`platform-id`，并替换`EFI/OC/config.plist`文件中的`Root/DeviceProperties/Add/PciRoot(0x0)/Pci(0x2,0x0)/device-id`项；并将`Root/DeviceProperties/Add/PciRoot(0x0)/Pci(0x2,0x0)/AAPL,ig-platform-id`项修改为`platform-id`的反转字节形式（如`platform-id`为`3EA50009`，则`AAPL,ig-platform-id`项修改为`0900A53E`）
 
 5. 准备一个至少4GB的U盘，最好是USB3.0的，格式化成FAT32文件系统，将第4步中准备好的`EFI`文件夹拷贝到U盘根目录和硬盘的引导分区
 
@@ -90,7 +96,7 @@
 
 ## 未实现
 
-* 麦克风无法工作，据说换成
+* 麦克风无法工作，据说换成`VoodooHDA.kext`驱动就能正常使用麦克风和扬声器，但在Monterey系统下测试无效
 * 睡眠后唤醒异常
 
 ## 未详细测试
@@ -117,7 +123,7 @@
 * [toshinori8/HP-ProDesk-400-G2-DM](https://github.com/toshinori8/HP-ProDesk-400-G2-DM)
 * [Dortania's OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/)
 * [OpenCore 简体中文参考手册](https://oc.skk.moe)
-* [OpenCore黑苹果引导配置说明](https://shuiyunxc.gitee.io/2020/03/10/instru/index/)
+* [OpenCore 黑苹果引导配置说明](https://shuiyunxc.gitee.io/2020/03/10/instru/index/)
 * [哔哩哔哩 机汤TV](https://space.bilibili.com/485711932)
 * [哔哩哔哩 国光_](https://space.bilibili.com/112842166)
 * [哔哩哔哩 大头蔡Cass](https://space.bilibili.com/16323318)
