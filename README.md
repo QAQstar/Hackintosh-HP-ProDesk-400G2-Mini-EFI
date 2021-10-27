@@ -115,6 +115,8 @@
 
 ![OpenCore界面](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/OpenCore.png)
 
+![GeekBench5跑分](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/GeekBench5.png)
+
 ![H265硬解](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/H265硬解.png)
 
 ## 参考
