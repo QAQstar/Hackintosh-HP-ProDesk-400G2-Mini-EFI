@@ -1,4 +1,4 @@
-# HP ProDesk 400 G2 微型台式电脑 OpenCore 0.7.4 EFI
+# HP ProDesk 400 G2 微型台式电脑 OpenCore 0.7.5 EFI
 
 ![电脑图片](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/PC.png)
 
@@ -16,9 +16,10 @@
 
 ## 注意事项
 
-* Release中的`EFI_Big Sur.zip`为macOS Big Sur（11.x.x）系统下的引导，`EFI_Monterey.zip`为macOS Monterey（12.0.1）系统下的引导，按需选择；若想使用macOS California（10.15.x），请使用`EFI_Big Sur.zip`并自行测试功能
-* macOS从Big Sur升级到Monterey时，需要替换EFI文件，替换为`EFI_Monterey.zip`，同时清除NVRAM
-* 替换后若蓝牙无法使用，关机切断电源，过段时间后重新开机即可（仅针对BCM943224PCIEBT2，其他网卡自行测试）
+* 不再更新macOS Big Sur下的OpenCore EFI文件，最后更新版本为OpenCore0.7.4
+* Release中0.7.4版本的`EFI_Big Sur.zip`为macOS Big Sur（11.x.x）系统下的引导，`EFI_Monterey.zip`为macOS Monterey（12.0.1）系统下的引导，按需选择；若想使用macOS California（10.15.x），请使用`EFI_Big Sur.zip`并自行测试功能
+* macOS从Big Sur升级到Monterey时，需要替换EFI文件，替换为0.7.4版本的`EFI_Monterey.zip`或更高OpenCore版本，同时清除NVRAM
+* 替换后若蓝牙无法使用，关机切断电源，过段时间后重新开机即可（仅针对BCM943224PCIEBT2，其他网卡自行测试），该问题已在EFI 0.7.5中解决
 
 ## 配置
 
@@ -32,7 +33,7 @@
 |  声卡  |          Realtek ALC221           |
 | SMBIOS |          Mac mini (2018)          |
 |  BIOS  |           N23 Ver 02.53           |
-|  引导  |          OpenCore 0.7.4           |
+|  引导  |          OpenCore 0.7.5           |
 
 系统：macOS Monterey 12.0.1
 
@@ -40,7 +41,7 @@
 
 ## 食用方法
 
-可参考[国光大佬的macOS安装教程](https://apple.sqlsec.com/5-实战演示/5-5.html)，也可按[OpenCore用户指南上的安装教程](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/)操作。以在Windows 10 x64系统下安装macOS Big Sur为例，进行如下步骤操作：
+可参考[国光大佬的macOS安装教程](https://apple.sqlsec.com/5-实战演示/5-5.html)，也可按[OpenCore用户指南上的安装教程](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/)操作。以在Windows 10 x64系统下，OpenCore 0.7.4安装macOS Big Sur为例，进行如下步骤操作：
 
 1. 给用于启动的硬盘预留出EFI引导分区（至少200MB），同时预留一部分空闲分区用于macOS
 
@@ -48,7 +49,7 @@
 
 3. 进入目录`OpenCore-0.7.4-RELEASE/Utilities/macrecovery/`，在该目录中运行cmd，输入`python macrecovery.py -b Mac-E43C1C25D4880AD6 -m 00000000000000000 download`（需要python3环境），等待下载完成后在该目录下得到`BaseSystem.dmg`和`BaseSystem.chunklist`两个文件
 
-4. 下载Releases中的的`EFI_Big Sur.zip`文件，并解压到本地。若核显不是HD530，则需要到[Intel核显platform ID整理](https://blog.daliansky.net/Intel-core-display-platformID-finishing.html)中找到你核显对应的`platform-id`，并替换`EFI/OC/config.plist`文件中的`Root/DeviceProperties/Add/PciRoot(0x0)/Pci(0x2,0x0)/device-id`项；并将`Root/DeviceProperties/Add/PciRoot(0x0)/Pci(0x2,0x0)/AAPL,ig-platform-id`项修改为`platform-id`的反转字节形式（如`platform-id`为`3EA50009`，则`AAPL,ig-platform-id`项修改为`0900A53E`）
+4. 下载Releases中0.7.4版本的`EFI_Big Sur.zip`文件，并解压到本地。若核显不是HD530，则需要到[Intel核显platform ID整理](https://blog.daliansky.net/Intel-core-display-platformID-finishing.html)中找到你核显对应的`platform-id`，并替换`EFI/OC/config.plist`文件中的`Root/DeviceProperties/Add/PciRoot(0x0)/Pci(0x2,0x0)/device-id`项；并将`Root/DeviceProperties/Add/PciRoot(0x0)/Pci(0x2,0x0)/AAPL,ig-platform-id`项修改为`platform-id`的反转字节形式（如`platform-id`为`3EA50009`，则`AAPL,ig-platform-id`项修改为`0900A53E`）
 
 5. 准备一个至少4GB的U盘，最好是USB3.0的，格式化成FAT32文件系统，将第4步中准备好的`EFI`文件夹拷贝到U盘根目录和硬盘的引导分区
 
@@ -75,7 +76,7 @@
 
 10. 点击`重新安装macOS`，并将macOS安装到第9步创建的分区中，等待安装过程
 
-11. 结束安装后，从硬盘启动即可进入到macOS，注意不要登录Apple ID，还需要注入新的三码，可参考[OpenCore生成三码](https://heipg.cn/tutorial/macserial-and-iservice-opencore.html)和[国光的PlatformInfo配置说明](https://apple.sqlsec.com/4-OC配置/4-7.html)。完成macOS初始化设置后下载Releases中的`OCC`文件，解压到本地后双击打开；在菜单栏中选中单击应用图标，点击`挂载分区`，输入密码后再点击`打开分区`，进入引导分区；双击打开`EFI/OC/config.plist`文件，在PlatformInfo设置中生成新的三码，并按下`Command+S`或点击左上角`文件-保存`即可。过程可见下图：  
+11. 结束安装后，从硬盘启动即可进入到macOS，注意不要登录Apple ID，还需要注入新的三码，可参考[OpenCore生成三码](https://heipg.cn/tutorial/macserial-and-iservice-opencore.html)和[国光的PlatformInfo配置说明](https://apple.sqlsec.com/4-OC配置/4-7.html)。完成macOS初始化设置后下载Releases中0.7.4版本的`OCC`文件（或使用[Hackintool](https://github.com/headkaze/Hackintool/releases)、[OCAuxiliaryTools](https://github.com/ic005k/QtOpenCoreConfig/releases)等app，建议使用OCAuxiliaryTools，个人认为比较好用），解压到本地后双击打开；在菜单栏中选中单击应用图标，点击`挂载分区`，输入密码后再点击`打开分区`，进入引导分区；双击打开`EFI/OC/config.plist`文件，在PlatformInfo设置中生成新的三码，并按下`Command+S`或点击左上角`文件-保存`即可。以OpenCore Configurator为例，过程可见下图：  
     ![挂载引导分区](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/挂载分区.png)  
     ![打开引导分区](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/打开分区.png)  
     ![打开config.plist文件](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/config文件.png)  
