@@ -16,10 +16,11 @@
 
 ## 注意事项
 
+* 请自行注入三码！！请自行注入三码！！请自行注入三码！！
 * 不再更新macOS Big Sur下的OpenCore EFI引导文件，最后更新版本为OpenCore 0.7.4
 * Release中0.7.4版本的`EFI_Big Sur.zip`为支持macOS Big Sur（11.x.x）系统的引导，`EFI_Monterey.zip`为支持macOS Monterey（12.0.1）系统的引导，按需选择；若想使用macOS California（10.15.x），请使用`EFI_Big Sur.zip`并自行测试功能
 * macOS从Big Sur升级到Monterey时，需要替换EFI文件，替换为OpenCore 0.7.4版本的`EFI_Monterey.zip`或更高版本，同时清除NVRAM
-* 替换0.7.4版本的EFI文件后若蓝牙无法使用，关机切断电源，过段时间后重新开机即可（仅针对BCM943224PCIEBT2，其他网卡自行测试）；该问题已在EFI 0.7.5中解决
+* 替换0.7.4版本的EFI文件后若蓝牙无法使用，关机切断电源，过段时间后重新开机即可（仅针对BCM943224PCIEBT2，其他网卡自行测试）；该问题已在0.7.5版本中解决
 
 ## 配置
 
