@@ -31,9 +31,9 @@
 | 当前系统 |                    macOS Monterey 12.0.1                     |
 |   CPU    |              Intel Core i5-6600T @ 2.7GHz 4C4T               |
 |   显卡   |                 Intel HD Graphics 530 1563MB                 |
-|   内存   |                 杂牌DDR4 2133MHz 16GB 双通道                 |
-|   硬盘   |               东芝 RC500 500GB + 日立HDD 500GB               |
-|   网卡   |                  RTL8111H/BCM943224PCIEBT2                   |
+|   内存   |               杂牌DDR4 2133MHz 8GB × 2 双通道                |
+|   硬盘   | SSD: TOSHIBA RC500 500GB  <br />HDD: HGST HTS545050A7E380 500GB |
+|   网卡   | Wired: Realtek RTL8111HSH-CG GbE  <br />Wireless: Broadcom BCM943224PCIEBT2 |
 |   声卡   |                        Realtek ALC221                        |
 |  SMBIOS  |                       Mac mini (2018)                        |
 |   BIOS   |                        N23 Ver 02.53                         |
