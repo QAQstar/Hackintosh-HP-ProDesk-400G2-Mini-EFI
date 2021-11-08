@@ -1,4 +1,4 @@
-# HP ProDesk 400 G2 微型台式电脑 OpenCore 0.7.5 EFI
+# HP ProDesk 400 G2 迷你型台式电脑 OpenCore 0.7.5 EFI
 
 ![电脑图片](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/PC.png)
 
@@ -25,19 +25,21 @@
 
 ## 配置
 
-|  配置  |               参数                |
-| :----: | :-------------------------------: |
-|  CPU   | Intel Core i5-6600T @ 2.7GHz 4C4T |
-|  显卡  |   Intel HD Graphics 530 1563MB    |
-|  内存  |   杂牌DDR4 2133MHz 16GB 双通道    |
-|  硬盘  | 东芝 RC500 500GB + 日立HDD 500GB  |
-|  网卡  |     RTL8111H/BCM943224PCIEBT2     |
-|  声卡  |          Realtek ALC221           |
-| SMBIOS |          Mac mini (2018)          |
-|  BIOS  |           N23 Ver 02.53           |
-|  引导  |          OpenCore 0.7.5           |
-
 系统：macOS Monterey 12.0.1
+
+|   配置   |                             参数                             |
+| :------: | :----------------------------------------------------------: |
+|   设备   | [HP ProDesk 400 G2 迷你型台式电脑](https://support.hp.com/cn-zh/document/c04864998)  <br />（[HP ProDesk 400 G2 Desktop Mini PC](https://support.hp.com/us-en/document/c04843458)） |
+| 当前系统 |                    macOS Monterey 12.0.1                     |
+|   CPU    |              Intel Core i5-6600T @ 2.7GHz 4C4T               |
+|   显卡   |                 Intel HD Graphics 530 1563MB                 |
+|   内存   |                 杂牌DDR4 2133MHz 16GB 双通道                 |
+|   硬盘   |               东芝 RC500 500GB + 日立HDD 500GB               |
+|   网卡   |                  RTL8111H/BCM943224PCIEBT2                   |
+|   声卡   |                        Realtek ALC221                        |
+|  SMBIOS  |                       Mac mini (2018)                        |
+|   BIOS   |                        N23 Ver 02.53                         |
+|   引导   |                        OpenCore 0.7.5                        |
 
 ![系统](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/桌面.png)
 
