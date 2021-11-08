@@ -16,6 +16,7 @@
 
 ## 注意事项
 
+* 测试EFI不易，如有帮助请动动小手点个Star
 * 请自行注入三码！！请自行注入三码！！请自行注入三码！！
 * 不再更新macOS Big Sur下的OpenCore EFI引导文件，最后更新版本为OpenCore 0.7.4
 * Release中0.7.4版本的`EFI_Big Sur.zip`为支持macOS Big Sur（11.x.x）系统的引导，`EFI_Monterey.zip`为支持macOS Monterey（12.0.1）系统的引导，按需选择；若想使用macOS California（10.15.x），请使用`EFI_Big Sur.zip`并自行测试功能
