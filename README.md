@@ -25,8 +25,6 @@
 
 ## 配置
 
-系统：macOS Monterey 12.0.1
-
 |   配置   |                             参数                             |
 | :------: | :----------------------------------------------------------: |
 |   设备   | [HP ProDesk 400 G2 迷你型台式电脑](https://support.hp.com/cn-zh/document/c04864998)  <br />（[HP ProDesk 400 G2 Desktop Mini PC](https://support.hp.com/us-en/document/c04843458)） |
