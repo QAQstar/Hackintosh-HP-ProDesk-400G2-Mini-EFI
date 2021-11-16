@@ -98,13 +98,14 @@
 ## 未实现
 
 * 麦克风无法工作，据说换成`VoodooHDA.kext`驱动就能正常使用麦克风和扬声器，但在Monterey系统下测试无效
-* 长时间睡眠后唤醒异常
+* 长时间睡眠后唤醒异常（已在尝试解决）
 
 ## 未详细测试
 
 * 使用DP转HDMI被动转换器在1080P分辨率下正常，在2K分辨率及以上分辨率下可能会出现闪屏问题（在我的一台显示器上会闪，另一台则不会），也有可能是我的转换器本身有问题
 * 2.4G Wi-Fi和蓝牙同时使用可能存在干扰，据说换其他的免驱网卡可解决
 * 有线随航和无线随航，没有iPad设备，故无法测试
+* 以非补丁的方式修复由于RTC错误而导致的启动自检失败，避免对其他系统造成潜在的影响
 
 ## BIOS设置
 
@@ -128,6 +129,7 @@
 * [Dortania's OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/)
 * [OpenCore 简体中文参考手册](https://oc.skk.moe)
 * [OpenCore 黑苹果引导配置说明](https://shuiyunxc.gitee.io/2020/03/10/instru/index/)
+* [RTC综述](https://blog.xjn819.com/post/rtc-issues-related-to-oc.html)
 * [哔哩哔哩 机汤TV](https://space.bilibili.com/485711932)
 * [哔哩哔哩 国光_](https://space.bilibili.com/112842166)
 * [哔哩哔哩 大头蔡Cass](https://space.bilibili.com/16323318)
