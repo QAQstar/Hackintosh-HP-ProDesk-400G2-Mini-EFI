@@ -18,6 +18,7 @@
 
 * 测试EFI不易，如有帮助请动动小手点个Star
 * 请自行注入三码！！请自行注入三码！！请自行注入三码！！
+* 若GitHub下载速度过慢，可以在[阿里云盘](https://www.aliyundrive.com/s/UPBKYsGzVg4)处下载
 * OpenCore 0.7.6或更高版本的EFI文件已对Big Sur做了兼容性适配，理论上可以用在Big Sur及更早系统上，但未经测试。最后一个经过测试能够在Big Sur上正常使用的版本是0.7.4
 * Release中0.7.4版本的`EFI_Big Sur.zip`为支持macOS Big Sur（11.x.x）系统的引导，`EFI_Monterey.zip`为支持macOS Monterey（12.0.1）系统的引导，按需选择；0.7.6及更高版本理论上能兼容Big Sur和Monterey；若想使用macOS California（10.15.x），请使用`EFI_Big Sur.zip`或0.7.6及更高版本的EFI，并自行测试功能。
 * macOS从Big Sur升级到Monterey时，需要替换EFI文件，替换为OpenCore 0.7.4版本的`EFI_Monterey.zip`或更高版本，同时清除NVRAM
@@ -90,7 +91,7 @@
 * 核显H265硬解正常
 * USB接口定制，速率正常
 * 扬声器正常
-* 有线/无线网卡正常，蓝牙正常，隔空投送正常，屏幕镜像正常，AirPlay正常，Handoff正常
+* 有线/无线网卡正常，蓝牙正常，隔空投送正常，屏幕镜像正常，接力正常，AirPlay正常
 * DP接口4K@60Hz输出正常，音频输出正常
 * 3.5mm音频输出接口正常
 * DP转HDMI主动转换器工作正常
@@ -130,6 +131,7 @@
 * [OpenCore 简体中文参考手册](https://oc.skk.moe)
 * [OpenCore 黑苹果引导配置说明](https://shuiyunxc.gitee.io/2020/03/10/instru/index/)
 * [RTC综述](https://blog.xjn819.com/post/rtc-issues-related-to-oc.html)
+* [macOS睡眠参数](https://sspai.com/post/61379)
 * [哔哩哔哩 机汤TV](https://space.bilibili.com/485711932)
 * [哔哩哔哩 国光_](https://space.bilibili.com/112842166)
 * [哔哩哔哩 大头蔡Cass](https://space.bilibili.com/16323318)
