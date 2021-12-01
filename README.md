@@ -17,6 +17,7 @@
 ## 注意事项
 
 * 测试EFI不易，如有帮助请动动小手点个Star
+* 若Releases中下载速度过慢，可移步[天翼网盘](https://cloud.189.cn/web/share?code=mQzyUvQR7jQr)下载
 * 请自行注入三码！！请自行注入三码！！请自行注入三码！！
 * OpenCore 0.7.6或更高版本的EFI文件已对Big Sur做了兼容性适配，理论上可以用在Big Sur及更早系统上，但未经测试。最后一个经过测试能够在Big Sur上正常使用的版本是0.7.4
 * Release中0.7.4版本的`EFI_Big Sur.zip`为支持macOS Big Sur（11.x.x）系统的引导，`EFI_Monterey.zip`为支持macOS Monterey（12.0.1）系统的引导，按需选择；0.7.6及更高版本理论上能兼容Big Sur和Monterey；若想使用macOS California（10.15.x），请使用`EFI_Big Sur.zip`或0.7.6及更高版本的EFI，并自行测试功能。
@@ -76,7 +77,7 @@
 
 10. 点击`重新安装macOS`，并将macOS安装到第9步创建的分区中，等待安装过程
 
-11. 结束安装后，从硬盘启动即可进入到macOS，注意不要登录Apple ID，还需要注入新的三码，可参考[OpenCore生成三码](https://heipg.cn/tutorial/macserial-and-iservice-opencore.html)和[国光的PlatformInfo配置说明](https://apple.sqlsec.com/4-OC配置/4-7.html)。完成macOS初始化设置后下载Releases中0.7.4版本的`OCC`文件（或使用[Hackintool](https://github.com/headkaze/Hackintool/releases)、[OCAuxiliaryTools](https://github.com/ic005k/QtOpenCoreConfig/releases)等app，建议使用OCAuxiliaryTools，个人认为比较好用），解压到本地后双击打开；在菜单栏中选中单击应用图标，点击`挂载分区`，输入密码后再点击`打开分区`，进入引导分区；双击打开`EFI/OC/config.plist`文件，在PlatformInfo设置中生成新的三码，并按下`Command+S`或点击左上角`文件-保存`即可。以OpenCore Configurator为例，过程可见下图：  
+11. 结束安装后，从硬盘启动即可进入到macOS，注意不要登录Apple ID，还需要注入新的三码，可参考[OpenCore生成三码](https://heipg.cn/tutorial/macserial-and-iservice-opencore.html)和[国光的PlatformInfo配置说明](https://apple.sqlsec.com/4-OC配置/4-7.html)。完成macOS初始化设置后下载Releases中0.7.4版本的`OCC.zip`（或使用[Hackintool](https://github.com/headkaze/Hackintool/releases)、[OCAuxiliaryTools](https://github.com/ic005k/QtOpenCoreConfig/releases)等app，建议使用OCAuxiliaryTools，个人认为比较好用），解压到本地后双击打开；在菜单栏中选中单击应用图标，点击`挂载分区`，输入密码后再点击`打开分区`，进入引导分区；双击打开`EFI/OC/config.plist`文件，在PlatformInfo设置中生成新的三码，并按下`Command+S`或点击左上角`文件-保存`即可。以OpenCore Configurator为例，过程可见下图：  
     ![挂载引导分区](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/挂载分区.png)  
     ![打开引导分区](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/打开分区.png)  
     ![打开config.plist文件](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/config文件.png)  
