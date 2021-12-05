@@ -12,7 +12,7 @@
 
 后来大佬把机子卖了，想升级OpenCore又不敢自己乱搞，有天在GitHub上看到有个外国老哥分享自己0.7.2的EFI，我就把他的引导和我手头的引导杂糅了一下，不确定的就翻OpenCore文档，开始了自己慢慢琢磨配置文件之路。
 
-总之整个折腾黑苹果的过程是非常有意思的。
+总之整个折腾黑苹果的过程是非常有意思的，有一起交流折腾经验的朋友可以[加我QQ](https://raw.githubusercontent.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/master/img/QQ.png)。
 
 ## 注意事项
 
