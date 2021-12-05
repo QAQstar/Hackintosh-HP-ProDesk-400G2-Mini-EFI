@@ -1,4 +1,4 @@
-# HP ProDesk 400 G2 迷你型台式电脑 OpenCore 0.7.5 EFI
+# HP ProDesk 400 G2 迷你型台式电脑 OpenCore 0.7.6 EFI
 
 ![电脑图片](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/PC.png)
 
@@ -38,7 +38,7 @@
 |   声卡   |                        Realtek ALC221                        |
 |  SMBIOS  |                       Mac mini (2018)                        |
 |   BIOS   |                        N23 Ver 02.53                         |
-|   引导   |                        OpenCore 0.7.5                        |
+|   引导   |                        OpenCore 0.7.6                        |
 
 ![系统](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/桌面.png)
 
@@ -88,25 +88,47 @@
 ## 已实现
 
 * CPU睿频变频正常
+
 * 核显H265硬解正常
+
 * USB接口定制，速率正常
+
 * 扬声器正常
+
 * 有线/无线网卡正常，蓝牙正常，隔空投送正常，屏幕镜像正常，接力正常，AirPlay正常
+
 * DP接口4K@60Hz输出正常，音频输出正常
+
 * 3.5mm音频输出接口正常
+
 * DP转HDMI主动转换器工作正常
+
+* 睡眠正常（请在终端中运行以下代码，`系统偏好设置-节能`中进行如下设置，以更新睡眠条件）
+
+    ```shell
+    sudo pmset -a hibernatemode 0
+    sudo rm -rf /var/vm/sleepimage
+    sudo mkdir /var/vm/sleepimage
+    sudo pmset -a standby 0
+    sudo pmset -a autopoweroff 0
+    sudo pmset -a hibernatemode 0
+    sudo pmset -a proximitywake 0
+    ```
+
+    - [x] `唤醒以供网络访问`
+    - [ ] `启用电能小憩`
+
+- 以非补丁的方式修复由于RTC错误而导致的启动自检失败
 
 ## 未实现
 
 * 麦克风及3.5mm音频输入接口无法工作，在11.3及更早系统中换成[`VoodooHDA.kext`](https://github.com/chris1111/VoodooHDA-OC)驱动就能正常使用麦克风和扬声器，但在后续版本中失效
-* 长时间睡眠后唤醒异常（已解决，将在0.7.6版本中更新）
 
 ## 未详细测试
 
 * 使用DP转HDMI被动转换器在1080P分辨率下正常，在2K分辨率及以上分辨率下可能会出现闪屏问题（在我的一台显示器上会闪，另一台则不会），也有可能是我的转换器本身有问题
 * 2.4G Wi-Fi和蓝牙同时使用可能存在干扰，据说换其他的免驱网卡可解决
 * 有线随航和无线随航没有iPad设备，无法测试
-* 以非补丁的方式修复由于RTC错误而导致的启动自检失败（仍在测试）
 
 ## BIOS设置
 
