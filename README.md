@@ -103,7 +103,7 @@
 
 * DP转HDMI主动转换器工作正常
 
-* 输出使用**[主动式DP转HDMI](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/DP_to_HDMI_Adapter.png)**时睡眠正常（请在终端中运行以下代码，`系统偏好设置-节能`中进行如下设置，以更新睡眠条件）
+* 输出使用[**主动式DP转HDMI**](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/DP_to_HDMI_Adapter.png)时睡眠正常（请在终端中运行以下代码，`系统偏好设置-节能`中进行如下设置，以更新睡眠条件）
 
     ```shell
     sudo pmset -a hibernatemode 0
