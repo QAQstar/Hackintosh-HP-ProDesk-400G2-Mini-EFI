@@ -103,7 +103,7 @@
 
 * DP转HDMI主动转换器工作正常
 
-* 输出使用[**主动式DP转HDMI**](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/DP_to_HDMI_Adapter.png)时睡眠正常（请在终端中运行以下代码，`系统偏好设置-节能`中进行如下设置，以更新睡眠条件）
+* 输出使用[**主动式DP转HDMI转换器**](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/DP_to_HDMI_Adapter.png)时睡眠正常（请在终端中运行以下代码，`系统偏好设置-节能`中进行如下设置，以设置好睡眠条件，其他条件下的睡眠功能请自行测试）
 
     ```shell
     sudo pmset -a hibernatemode 0
@@ -123,7 +123,7 @@
 ## 未实现
 
 * 麦克风及3.5mm音频输入接口无法工作，在11.3及更早系统中换成[`VoodooHDA.kext`](https://github.com/chris1111/VoodooHDA-OC)驱动就能正常使用麦克风和扬声器，但在后续版本中失效
-* 使用DP线时睡眠唤醒失败
+* 使用DP线时睡眠后唤醒失败，由于本人精力有限，后续将不会占用过多时间解决该问题，有精力的朋友可以自行尝试解决，如解决了欢迎提issue
 
 ## 未详细测试
 
