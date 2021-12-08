@@ -73,7 +73,7 @@
     |    +-- .contentDetails
     ```
 
-9. 将U盘插入到主机上，选择U盘启动，在看到引导界面时按下空格，选择`macOS Recovery`启动项，如下图
+9. 将U盘插入到主机上，选择U盘启动，在看到引导界面时按下空格，选择`macOS Recovery (dmg)`启动项，即下图中被选中的启动项：
     ![recovery_boot](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/recovery_boot.png)
 
 9. 点击`磁盘工具`，将第1步中的空闲分区格式化成APFS格式，然后退出磁盘工具
