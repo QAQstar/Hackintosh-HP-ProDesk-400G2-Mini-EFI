@@ -48,6 +48,8 @@
 
 1. 给用于启动的硬盘预留出EFI引导分区（至少200MB），同时预留一部分空闲分区用于macOS
 
+1. 可移步至[天翼网盘](https://cloud.189.cn/web/share?code=mQzyUvQR7jQr)下载`com.apple.recovery.boot`文件夹下的所有文件，并跳到第7步；或执行接下来的2-6步自行生成恢复文件
+
 2. 从[OpenCorePkg](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.7.4)中下载`OpenCore-0.7.4-RELEASE.zip`，解压到本地
 
 3. 进入目录`OpenCore-0.7.4-RELEASE/Utilities/macrecovery/`，在该目录中运行cmd，输入`python macrecovery.py -b Mac-E43C1C25D4880AD6 -m 00000000000000000 download`（需要python3环境），等待下载完成后在该目录下得到`BaseSystem.dmg`和`BaseSystem.chunklist`两个文件
@@ -56,7 +58,7 @@
 
 5. 准备一个至少4GB的U盘，最好是USB3.0的，格式化成FAT32文件系统，将第4步中准备好的`EFI`文件夹拷贝到U盘根目录和硬盘的引导分区
 
-6. 在U盘根目录下创建`com.apple.recovery.boot`文件夹，并拷贝`BaseSystem.dmg`和`BaseSystem.chunklist`到该文件夹中；在`com.apple.recovery.boot`文件夹中创建`.contentDetails`文件，文件内容为`macOS Recovery`
+6. 在U盘根目录下创建`com.apple.recovery.boot`文件夹，并拷贝`BaseSystem.dmg`和`BaseSystem.chunklist`到该文件夹中；在`com.apple.recovery.boot`文件夹中创建`.contentDetails`文件（若从网盘中下载了该文件则不需要自己手动新建），文件内容为`macOS Recovery`
 
 7. 此时U盘中目录结构应如下：
 
