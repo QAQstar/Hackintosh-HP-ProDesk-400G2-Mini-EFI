@@ -48,7 +48,7 @@
 
 1. 给用于启动的硬盘预留出EFI引导分区（至少200MB），同时预留一部分空闲分区用于macOS
 
-1. 可移步至[天翼网盘](https://cloud.189.cn/web/share?code=mQzyUvQR7jQr)下载`com.apple.recovery.boot`文件夹下的所有文件，并跳到第7步；或执行接下来的2-6步自行生成恢复文件
+1. 可移步至[天翼网盘](https://cloud.189.cn/web/share?code=mQzyUvQR7jQr)下载`com.apple.recovery.boot`文件夹下的所有文件，并跳到第7步；或执行接下来的3-6步自行生成恢复文件
 
 2. 从[OpenCorePkg](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.7.4)中下载`OpenCore-0.7.4-RELEASE.zip`，解压到本地
 
