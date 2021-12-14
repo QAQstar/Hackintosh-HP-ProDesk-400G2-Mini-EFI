@@ -29,7 +29,7 @@
 |   配置   |                             参数                             |
 | :------: | :----------------------------------------------------------: |
 |   设备   | [HP ProDesk 400 G2 迷你型台式电脑](https://support.hp.com/cn-zh/document/c04864998)  <br />（[HP ProDesk 400 G2 Desktop Mini PC](https://support.hp.com/us-en/document/c04843458)） |
-| 当前系统 |                    macOS Monterey 12.0.1                     |
+| 当前系统 |                 macOS Monterey 12.1 (21C52)                  |
 |   CPU    |              Intel Core i5-6600T @ 2.7GHz 4C4T               |
 |   显卡   |                 Intel HD Graphics 530 1536MB                 |
 |   内存   |               杂牌DDR4 2133MHz 8GB × 2 双通道                |
