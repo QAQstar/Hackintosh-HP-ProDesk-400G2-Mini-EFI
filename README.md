@@ -30,8 +30,8 @@
 | :------: | :----------------------------------------------------------: |
 |   设备   | [HP ProDesk 400 G2 迷你型台式电脑](https://support.hp.com/cn-zh/document/c04864998)  <br />（[HP ProDesk 400 G2 Desktop Mini PC](https://support.hp.com/us-en/document/c04843458)） |
 | 当前系统 |                 macOS Monterey 12.1 (21C52)                  |
-|   CPU    |              Intel Core i5-6600T @ 2.7GHz 4C4T               |
-|   显卡   |                 Intel HD Graphics 530 1536MB                 |
+|   CPU    |       Intel<sup>®</sup> Core™ i5-6600T @ 2.70GHz 4C4T        |
+|   显卡   |               Intel HD Graphics 530 @ 1.10GHz                |
 |   内存   |               杂牌DDR4 2133MHz 8GB × 2 双通道                |
 |   硬盘   | SSD: TOSHIBA RC500 500GB  <br />HDD: HGST HTS545050A7E380 500GB |
 |   网卡   | Wired: Realtek RTL8111HSH-CG GbE  <br />Wireless: Broadcom BCM943224PCIEBT2 |
@@ -98,7 +98,7 @@
 
 * 扬声器正常
 
-* 有线/无线网卡正常，蓝牙正常，隔空投送正常，屏幕镜像正常，接力正常，AirPlay正常
+* 有线/无线网卡正常，蓝牙正常，隔空投送正常，屏幕镜像正常，接力正常，随航正常（因网卡性能限制，随航效果可能不太好），AirPlay正常
 
 * DP接口4K@60Hz输出正常，HiDPI正常，音频输出正常
 
@@ -121,24 +121,23 @@
     - [x] `唤醒以供网络访问`
     - [ ] `启用电能小憩`
 
-- 以非补丁的方式修复由于RTC错误而导致的启动自检失败
+- 以非补丁的方式修复由于RTC错误而导致的启动时自检失败
 
 ## 未实现
 
 * 麦克风及3.5mm音频输入接口无法工作，在11.3及更早系统中换成[`VoodooHDA.kext`](https://github.com/chris1111/VoodooHDA-OC)驱动就能正常使用麦克风和扬声器，但在后续版本中失效
-* 使用DP线时睡眠后唤醒失败（似乎是显示器的锅，因为使用DP诱骗器时睡眠正常，但无额外显示器用于测试），由于本人精力有限，后续将不会占用过多时间解决该问题，有精力的朋友可以自行尝试解决，如解决了欢迎提issue
 
 ## 未详细测试
 
 * 使用被动式DP转HDMI转换器在1080P分辨率下正常，在2K分辨率及以上分辨率下可能会出现闪屏问题（在我的一台显示器上会闪，另一台则不会），也有可能是我的转换器本身有问题
-* 2.4G Wi-Fi和蓝牙同时使用可能存在干扰，据说换其他的免驱网卡可解决
-* 有线随航和无线随航没有iPad设备，无法测试
+* 2.4G Wi-Fi和蓝牙同时使用可能存在干扰，据说将2.4G Wi-Fi信道换成1/4/11可以缓解，彻底解决可能需要更换四天线的免驱网卡
+* 在某些条件下使用DP线时睡眠后唤醒失败（似乎和显示器有关系，因为使用DP诱骗器时睡眠正常，但无额外显示器用于测试），由于本人精力有限，后续将不会占用过多时间解决该问题，有精力的朋友可以自行尝试解决，如解决了欢迎提issue或[联系我](https://raw.githubusercontent.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/master/img/QQ.png)
 
 ## BIOS设置
 
 * 关闭Secure Boot
 * 关闭Fast Boot
-* 关闭VT-d，或在`config.plist`中将`Root/Kernel/Quirks/DisableIoMapper`项设为`True`
+* 关闭VT-d，或在`config.plist`中将`Root/Kernel/Quirks/DisableIoMapper`项设为`True`（在系统升级、系统安装等过程中必须关闭VT-d，否则有几率卡苹果）
 * 显存分配至少为64MB
 
 ## 截图
