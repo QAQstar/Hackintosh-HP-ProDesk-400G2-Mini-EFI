@@ -1,10 +1,10 @@
-# HP ProDesk 400 G2 迷你型台式电脑 OpenCore 0.7.6 EFI
+# HP ProDesk 400 G2 迷你型台式电脑 OpenCore 0.7.7 EFI
 
 ![电脑图片](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/PC.png)
 
 ## 随便说点
 
-在20年10月份那会机缘巧合之下获得了一台MacBook Pro，凑巧在B站首页上刷到了机汤哥的视频，是一个[面向萌新的从零开始的黑苹果攒机视频](https://www.bilibili.com/video/BV1ck4y117Cj)，说的就是这台惠普小机机。当时我就心动了，主要是便宜和傻瓜化，顺便还能统一工作环境，犹豫了几天就开始买配件跟着视频组装了。
+在20年凑巧在B站首页上刷到了[机汤哥]((https://space.bilibili.com/485711932))的视频，是一个[面向萌新的从零开始的黑苹果攒机视频](https://www.bilibili.com/video/BV1ck4y117Cj)，说的就是这台惠普小机机。当时我就心动了，主要是便宜和傻瓜化，顺便还能统一工作环境，犹豫了几天就开始买配件跟着视频组装了。
 
 我当时买的时候价格比起视频里所介绍的小涨了一波，但也是可以接受。当时入手主机+天线+电源是330元，i5 6600T是440元，两根杂牌8G内存是240元，500G机械硬盘69元，240G影驰垃圾固态150元（后来频繁掉盘，当时写入量还不到13T，不得已只能换了东芝RC500，285元），总共加起来才一千块出头，算是对想折腾黑苹果很友好很实在的搭配了。
 
@@ -38,7 +38,7 @@
 |   声卡   |                        Realtek ALC221                        |
 |  SMBIOS  |                       Mac mini (2018)                        |
 |   BIOS   |                        N23 Ver 02.53                         |
-|   引导   |                        OpenCore 0.7.6                        |
+|   引导   |                        OpenCore 0.7.7                        |
 
 ![系统](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/桌面.png)
 
