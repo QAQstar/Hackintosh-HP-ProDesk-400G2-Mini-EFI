@@ -1,5 +1,7 @@
 # HP ProDesk 400 G2 迷你型台式电脑 OpenCore 0.7.7 EFI
 
+由于深圳疫情，我暂时无法返深，但是机器放在深圳，所以后续更新只能等疫情稳定后返深了。。同时这机器也不间断运行近2个月了，还是很稳定的
+
 ![电脑图片](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/PC.png)
 
 ## 随便说点
