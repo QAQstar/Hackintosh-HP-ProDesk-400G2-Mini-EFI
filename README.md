@@ -1,4 +1,4 @@
-# HP ProDesk 400 G2 迷你型台式电脑 OpenCore 0.7.7 EFI
+# HP ProDesk 400 G2 迷你型台式电脑 OpenCore 0.8.0 EFI
 
 由于深圳疫情，我暂时无法返深，但是机器放在深圳，所以后续更新只能等疫情稳定后返深了。。同时这机器也不间断运行近2个月了，还是很稳定的
 
@@ -31,7 +31,7 @@
 |   配置   |                             参数                             |
 | :------: | :----------------------------------------------------------: |
 |   设备   | [HP ProDesk 400 G2 迷你型台式电脑](https://support.hp.com/cn-zh/document/c04864998)  <br />（[HP ProDesk 400 G2 Desktop Mini PC](https://support.hp.com/us-en/document/c04843458)） |
-| 当前系统 |                 macOS Monterey 12.1 (21C52)                  |
+| 当前系统 |                 macOS Monterey 12.4 (21F79)                  |
 |   CPU    |       Intel<sup>®</sup> Core™ i5-6600T @ 2.70GHz 4C4T        |
 |   显卡   |               Intel HD Graphics 530 @ 1.10GHz                |
 |   内存   |               杂牌DDR4 2133MHz 8GB × 2 双通道                |
@@ -46,15 +46,15 @@
 
 ## 食用方法
 
-可参考[国光大佬的macOS安装教程](https://apple.sqlsec.com/5-实战演示/5-5.html)，也可按[OpenCore用户指南上的安装教程](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/)操作。以在Windows 10 x64系统下，OpenCore 0.7.4安装macOS Big Sur为例，进行如下步骤操作：
+可参考[国光大佬的macOS安装教程](https://apple.sqlsec.com/5-实战演示/5-5.html)，也可按[OpenCore用户指南上的安装教程](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/)操作。以在Windows 10 x64系统下，OpenCore 0.8.0安装macOS Monterey为例，进行如下步骤操作：
 
 1. 给用于启动的硬盘预留出EFI引导分区（至少200MB），同时预留一部分空闲分区用于macOS
 
 1. 可移步至[天翼网盘](https://cloud.189.cn/web/share?code=mQzyUvQR7jQr)下载`com.apple.recovery.boot`文件夹下的所有文件，并跳到第5步；或执行接下来的3-4步自行生成恢复文件
 
-2. 从[OpenCorePkg](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.7.4)中下载`OpenCore-0.7.4-RELEASE.zip`，解压到本地
+2. 从[OpenCorePkg](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.8.0)中下载`OpenCore-0.8.0-RELEASE.zip`，解压到本地
 
-3. 进入目录`OpenCore-0.7.4-RELEASE/Utilities/macrecovery/`，在该目录中运行cmd，输入`python macrecovery.py -b Mac-E43C1C25D4880AD6 -m 00000000000000000 download`（需要python3环境），等待下载完成后在该目录下得到`BaseSystem.dmg`和`BaseSystem.chunklist`两个文件
+3. 进入目录`OpenCore-0.8.0-RELEASE/Utilities/macrecovery/`，在该目录中运行cmd，输入`python ./macrecovery.py -b Mac-E43C1C25D4880AD6 -m 00000000000000000 download`（需要python3环境），等待下载完成后在该目录下得到`BaseSystem.dmg`和`BaseSystem.chunklist`两个文件（若需要安装其他版本，参考该目录下的`recovery_urls.txt`文件）
 
 4. 下载[Releases中0.7.4版本](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/releases/tag/0.7.4)的`EFI_Big Sur.zip`文件，并解压到本地。若核显不是HD530，则需要到[英特尔®核芯显卡常见问答](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.IntelHD.cn.md)中找到你核显对应的`platform-id`，并替换`EFI/OC/config.plist`文件中的`Root/DeviceProperties/Add/PciRoot(0x0)/Pci(0x2,0x0)/device-id`项；并将`Root/DeviceProperties/Add/PciRoot(0x0)/Pci(0x2,0x0)/AAPL,ig-platform-id`项修改为`platform-id`的反转字节形式（如`platform-id`为`3EA50009`，则`AAPL,ig-platform-id`项修改为`0900A53E`）
 
