@@ -54,7 +54,7 @@
 
 3. 进入目录`OpenCore-0.8.0-RELEASE/Utilities/macrecovery/`，在该目录中运行cmd，输入`python ./macrecovery.py -b Mac-E43C1C25D4880AD6 -m 00000000000000000 download`（需要python3环境），等待下载完成后在该目录下得到`BaseSystem.dmg`和`BaseSystem.chunklist`两个文件（若需要安装其他版本，参考该目录下的`recovery_urls.txt`文件）
 
-4. 下载[Releases中0.7.4版本](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/releases/tag/0.7.4)的`EFI_Big Sur.zip`文件，并解压到本地。若核显不是HD530，则需要到[英特尔®核芯显卡常见问答](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.IntelHD.cn.md)中找到你核显对应的`platform-id`，并替换`EFI/OC/config.plist`文件中的`Root/DeviceProperties/Add/PciRoot(0x0)/Pci(0x2,0x0)/device-id`项；并将`Root/DeviceProperties/Add/PciRoot(0x0)/Pci(0x2,0x0)/AAPL,ig-platform-id`项修改为`platform-id`的反转字节形式（如`platform-id`为`3EA50009`，则`AAPL,ig-platform-id`项修改为`0900A53E`）
+4. 下载[Releases中0.8.0版本](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/releases/tag/0.8.0)的`EFI.zip`文件，并解压到本地。若核显不是HD530，则需要到[英特尔®核芯显卡常见问答](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.IntelHD.cn.md)中找到你核显对应的`platform-id`，并替换`EFI/OC/config.plist`文件中的`Root/DeviceProperties/Add/PciRoot(0x0)/Pci(0x2,0x0)/device-id`项；并将`Root/DeviceProperties/Add/PciRoot(0x0)/Pci(0x2,0x0)/AAPL,ig-platform-id`项修改为`platform-id`的反转字节形式（如`platform-id`为`3EA50009`，则`AAPL,ig-platform-id`项修改为`0900A53E`）
 
 5. 准备一个至少4GB的U盘，最好是USB3.0的，格式化成FAT32文件系统，将第5步中准备好的`EFI`文件夹拷贝到U盘根目录和硬盘的引导分区
 
