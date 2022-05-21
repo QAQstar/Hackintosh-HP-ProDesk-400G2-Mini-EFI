@@ -17,7 +17,7 @@
 ## 注意事项
 
 * 测试EFI不易，如有帮助请动动小手点个Star
-* 若Releases中下载速度过慢，可移步[天翼网盘](https://cloud.189.cn/web/share?code=mQzyUvQR7jQr)下载
+* 若Releases中下载速度过慢，~~可移步[天翼网盘](https://cloud.189.cn/web/share?code=mQzyUvQR7jQr)下载~~。由于天翼网盘分享审核不通过，无法通过它来分享EFI和恢复文件了。不知道大家还知道有哪些可以分享的渠道，请在issue里告知，谢谢～
 * 请自行注入三码！！请自行注入三码！！请自行注入三码！！
 * OpenCore 0.7.6或更高版本的EFI文件已对Big Sur做了兼容性适配，理论上可以用在Big Sur及更早系统上，但未经测试。最后一个经过测试能够在Big Sur上正常使用的版本是0.7.4
 * Release中0.7.4版本的`EFI_Big Sur.zip`为支持macOS Big Sur（11.x.x）系统的引导，`EFI_Monterey.zip`为支持macOS Monterey（12.0.1）系统的引导，按需选择；0.7.6及更高版本理论上能兼容Big Sur和Monterey；若想使用macOS California（10.15.x），请使用`EFI_Big Sur.zip`或0.7.6及更高版本的EFI，并自行测试功能。
@@ -48,7 +48,7 @@
 
 1. 给用于启动的硬盘预留出EFI引导分区（至少200MB），同时预留一部分空闲分区用于macOS
 
-1. 可移步至[天翼网盘](https://cloud.189.cn/web/share?code=mQzyUvQR7jQr)下载`com.apple.recovery.boot`文件夹下的所有文件，并跳到第5步；或执行接下来的3-4步自行生成恢复文件
+1. ~~可移步至[天翼网盘](https://cloud.189.cn/web/share?code=mQzyUvQR7jQr)下载`com.apple.recovery.boot`文件夹下的所有文件，并跳到第5步；~~或执行接下来的3-4步自行生成恢复文件。由于天翼网盘分享审核不通过，无法通过它来分享EFI和恢复文件了。不知道大家还知道有哪些可以分享的渠道，请在issue里告知，谢谢～
 
 2. 从[OpenCorePkg](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.8.0)中下载`OpenCore-0.8.0-RELEASE.zip`，解压到本地
 
