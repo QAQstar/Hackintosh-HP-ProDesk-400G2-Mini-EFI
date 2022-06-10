@@ -1,4 +1,4 @@
-# HP ProDesk 400 G2 迷你型台式电脑 OpenCore 0.8.0 EFI
+# HP ProDesk 400 G2 迷你型台式电脑 OpenCore 0.8.1 EFI
 
 ![电脑图片](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/PC.png)
 
@@ -38,7 +38,7 @@
 |   声卡   |                        Realtek ALC221                        |
 |  SMBIOS  |                       Mac mini (2018)                        |
 |   BIOS   |                        N23 Ver 02.53                         |
-|   引导   |                        OpenCore 0.8.0                        |
+|   引导   |                        OpenCore 0.8.1                        |
 
 ![系统](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/桌面.png)
 
