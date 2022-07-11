@@ -1,4 +1,4 @@
-# HP ProDesk 400 G2 迷你型台式电脑 OpenCore 0.8.1 EFI
+# HP ProDesk 400 G2 迷你型台式电脑 OpenCore 0.8.2 EFI
 
 ![电脑图片](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/PC.png)
 
@@ -20,7 +20,7 @@
 * 若Releases中下载速度过慢，~~可移步[天翼网盘](https://cloud.189.cn/web/share?code=mQzyUvQR7jQr)下载~~。由于天翼网盘分享审核不通过，无法通过它来分享EFI和恢复文件了。不知道大家还知道有哪些可以分享的渠道，请在issue里告知，谢谢～
 * 请自行注入三码！！请自行注入三码！！请自行注入三码！！
 * OpenCore 0.7.6或更高版本的EFI文件已对Big Sur做了兼容性适配，理论上可以用在Big Sur及更早系统上，但未经测试。最后一个经过测试能够在Big Sur上正常使用的版本是0.7.4
-* Release中0.7.4版本的`EFI_Big Sur.zip`为支持macOS Big Sur（11.x.x）系统的引导，`EFI_Monterey.zip`为支持macOS Monterey（12.0.1）系统的引导，按需选择；0.7.6及更高版本理论上能兼容Big Sur和Monterey；若想使用macOS California（10.15.x），请使用`EFI_Big Sur.zip`或0.7.6及更高版本的EFI，并自行测试功能。
+* Release中0.7.4版本的`EFI_Big Sur.zip`为支持macOS Big Sur（11.x.x）系统的引导，`EFI_Monterey.zip`为支持macOS Monterey（12.0.1）系统的引导，按需选择；0.7.6及更高版本理论上能兼容Big Sur和Monterey；若想使用macOS California（10.15.x），请使用`EFI_Big Sur.zip`或0.7.6及更高版本的EFI，并自行测试功能
 * macOS从Big Sur升级到Monterey时，需要替换EFI文件，替换为OpenCore 0.7.4版本的`EFI_Monterey.zip`或更高版本，同时清除NVRAM
 * 替换EFI文件后若蓝牙或Wi-Fi无法正常使用，关机切断电源，过段时间后重新开机即可（仅针对BCM943224PCIEBT2，其他网卡自行测试）
 
@@ -38,7 +38,7 @@
 |   声卡   |                        Realtek ALC221                        |
 |  SMBIOS  |                       Mac mini (2018)                        |
 |   BIOS   |                        N23 Ver 02.53                         |
-|   引导   |                        OpenCore 0.8.1                        |
+|   引导   |                        OpenCore 0.8.2                        |
 
 ![系统](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/桌面.png)
 
