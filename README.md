@@ -6,7 +6,7 @@
 
 正在调整
 
-![Ventura_beta](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/macOS_13_beta.png)
+![Ventura_beta](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/macOS_13_beta.jpg)
 
 ## 随便说点
 
