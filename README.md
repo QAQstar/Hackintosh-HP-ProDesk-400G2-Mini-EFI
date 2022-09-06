@@ -1,6 +1,12 @@
-# HP ProDesk 400 G2 迷你型台式电脑 OpenCore 0.8.2 EFI
+# HP ProDesk 400 G2 迷你型台式电脑 OpenCore 0.8.4 EFI
 
 ![电脑图片](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/PC.png)
+
+## MacOS 13 Ventura 适配中
+
+正在调整
+
+![Ventura_beta](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/macOS_13_beta.png)
 
 ## 随便说点
 
@@ -29,7 +35,7 @@
 |   配置   |                             参数                             |
 | :------: | :----------------------------------------------------------: |
 |   设备   | [HP ProDesk 400 G2 迷你型台式电脑](https://support.hp.com/cn-zh/document/c04864998)  <br />（[HP ProDesk 400 G2 Desktop Mini PC](https://support.hp.com/us-en/document/c04843458)） |
-| 当前系统 |                 macOS Monterey 12.4 (21F79)                  |
+| 当前系统 |                macOS Monterey 12.5.1 (21G83)                 |
 |   CPU    |       Intel<sup>®</sup> Core™ i5-6600T @ 2.70GHz 4C4T        |
 |   显卡   |               Intel HD Graphics 530 @ 1.10GHz                |
 |   内存   |               杂牌DDR4 2133MHz 8GB × 2 双通道                |
@@ -38,7 +44,7 @@
 |   声卡   |                        Realtek ALC221                        |
 |  SMBIOS  |                       Mac mini (2018)                        |
 |   BIOS   |                        N23 Ver 02.53                         |
-|   引导   |                        OpenCore 0.8.2                        |
+|   引导   |                        OpenCore 0.8.4                        |
 
 ![系统](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/桌面.png)
 
@@ -106,7 +112,7 @@
 
 * DP转HDMI主动转换器工作正常
 
-* 输出使用[**主动式DP转HDMI转换器**](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/DP_to_HDMI_Adapter.png)时睡眠正常（请在终端中运行以下代码，`系统偏好设置-节能`中进行如下设置，以设置好睡眠条件，其他条件下的睡眠功能请自行测试）
+* 输出使用[**主动式DP转HDMI转换器**](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/DP_to_HDMI_Adapter.png)时睡眠正常（Opencore 0.8.2 update：系统更新至Monterey 12.4后睡眠出现问题了，暂未解决）（请在终端中运行以下代码，`系统偏好设置-节能`中进行如下设置，以设置好睡眠条件，其他条件下的睡眠功能请自行测试）
 
     ```shell
     sudo pmset -a hibernatemode 0
@@ -129,7 +135,6 @@
 
 ## 未详细测试
 
-* 使用被动式DP转HDMI转换器在1080P分辨率下正常，在2K分辨率及以上分辨率下可能会出现闪屏问题（在我的一台显示器上会闪，另一台则不会），也有可能是我的转换器本身有问题
 * 2.4G Wi-Fi和蓝牙同时使用可能存在干扰，据说将2.4G Wi-Fi信道换成1/4/11可以缓解，彻底解决可能需要更换四天线的免驱网卡
 * 在某些条件下使用DP线时睡眠后唤醒失败（似乎和显示器有关系，因为使用DP诱骗器时睡眠正常，但无额外显示器用于测试），由于本人精力有限，后续将不会占用过多时间解决该问题，有精力的朋友可以自行尝试解决，如解决了欢迎提issue或[联系我](https://raw.githubusercontent.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/master/img/QQ.png)
 
@@ -138,6 +143,7 @@
 * 关闭Secure Boot
 * 关闭Fast Boot
 * 关闭VT-d，或在`config.plist`中将`Root/Kernel/Quirks/DisableIoMapper`项设为`True`（在系统升级、系统安装等过程中必须关闭VT-d，否则有几率卡苹果）
+* 关闭所有Power Management选项
 * 显存分配至少为64MB
 
 ## 截图
