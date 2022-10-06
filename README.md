@@ -1,4 +1,4 @@
-# HP ProDesk 400 G2 迷你型台式电脑 OpenCore 0.8.4 EFI
+# HP ProDesk 400 G2 迷你型台式电脑 OpenCore 0.8.5 EFI
 
 ![电脑图片](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/PC.png)
 
@@ -35,7 +35,7 @@
 |   配置   |                             参数                             |
 | :------: | :----------------------------------------------------------: |
 |   设备   | [HP ProDesk 400 G2 迷你型台式电脑](https://support.hp.com/cn-zh/document/c04864998)  <br />（[HP ProDesk 400 G2 Desktop Mini PC](https://support.hp.com/us-en/document/c04843458)） |
-| 当前系统 |                macOS Monterey 12.5.1 (21G83)                 |
+| 当前系统 |                 macOS Monterey 12.6 (21G115)                 |
 |   CPU    |       Intel<sup>®</sup> Core™ i5-6600T @ 2.70GHz 4C4T        |
 |   显卡   |               Intel HD Graphics 530 @ 1.10GHz                |
 |   内存   |               杂牌DDR4 2133MHz 8GB × 2 双通道                |
@@ -44,7 +44,7 @@
 |   声卡   |                        Realtek ALC221                        |
 |  SMBIOS  |                       Mac mini (2018)                        |
 |   BIOS   |                        N23 Ver 02.53                         |
-|   引导   |                        OpenCore 0.8.4                        |
+|   引导   |                        OpenCore 0.8.5                        |
 
 ![系统](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/桌面.png)
 
@@ -135,7 +135,7 @@
 
 ## 未详细测试
 
-* 2.4G Wi-Fi和蓝牙同时使用可能存在干扰，据说将2.4G Wi-Fi信道换成1/4/11可以缓解，彻底解决可能需要更换四天线的免驱网卡
+* 2.4G Wi-Fi和蓝牙同时使用可能存在干扰，据说将2.4G Wi-Fi信道换成1/4/11可以缓解，彻底解决可能性不大
 * 在某些条件下使用DP线时睡眠后唤醒失败（似乎和显示器有关系，因为使用DP诱骗器时睡眠正常，但无额外显示器用于测试），由于本人精力有限，后续将不会占用过多时间解决该问题，有精力的朋友可以自行尝试解决，如解决了欢迎提issue或[联系我](https://raw.githubusercontent.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/master/img/QQ.png)
 
 ## BIOS设置
