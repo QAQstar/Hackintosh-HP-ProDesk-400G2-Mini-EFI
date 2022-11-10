@@ -112,7 +112,7 @@
 
 * DP转HDMI主动转换器工作正常
 
-* 输出使用[**主动式DP转HDMI转换器**](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/DP_to_HDMI_Adapter.png)时睡眠正常（Opencore 0.8.2 update：系统更新至Monterey 12.4后睡眠出现问题了，暂未解决）（请在终端中运行以下代码，`系统偏好设置-节能`中进行如下设置，以设置好睡眠条件，其他条件下的睡眠功能请自行测试）
+* 输出使用[**主动式DP转HDMI转换器**](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/DP_to_HDMI_Adapter.png)时睡眠正常（比较挑线，必须是主动式DP转HDMI+显示器HDMI接口）（请在终端中运行以下代码，`系统偏好设置-节能`中进行如下设置，以设置好睡眠条件，其他条件下的睡眠功能请自行测试）
 
     ```shell
     sudo pmset -a hibernatemode 0
