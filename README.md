@@ -1,4 +1,4 @@
-# HP ProDesk 400 G2 迷你型台式电脑 OpenCore 0.8.5 EFI
+# HP ProDesk 400 G2 迷你型台式电脑 OpenCore 0.8.6 EFI
 
 ![电脑图片](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/PC.png)
 
@@ -35,7 +35,7 @@
 |   配置   |                             参数                             |
 | :------: | :----------------------------------------------------------: |
 |   设备   | [HP ProDesk 400 G2 迷你型台式电脑](https://support.hp.com/cn-zh/document/c04864998)  <br />（[HP ProDesk 400 G2 Desktop Mini PC](https://support.hp.com/us-en/document/c04843458)） |
-| 当前系统 |                 macOS Monterey 12.6 (21G115)                 |
+| 当前系统 |                macOS Monterey 12.6.1 (21G217)                |
 |   CPU    |       Intel<sup>®</sup> Core™ i5-6600T @ 2.70GHz 4C4T        |
 |   显卡   |               Intel HD Graphics 530 @ 1.10GHz                |
 |   内存   |               杂牌DDR4 2133MHz 8GB × 2 双通道                |
@@ -43,8 +43,8 @@
 |   网卡   | Wired: Realtek RTL8111HSH-CG GbE  <br />Wireless: Broadcom BCM943224PCIEBT2 |
 |   声卡   |                        Realtek ALC221                        |
 |  SMBIOS  |                       Mac mini (2018)                        |
-|   BIOS   |                        N23 Ver 02.53                         |
-|   引导   |                        OpenCore 0.8.5                        |
+|   BIOS   |                        N23 Ver 02.58                         |
+|   引导   |                        OpenCore 0.8.6                        |
 
 ![系统](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/桌面.png)
 
