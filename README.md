@@ -1,4 +1,4 @@
-# HP ProDesk 400 G2 迷你型台式电脑 OpenCore 0.8.6 EFI
+# HP ProDesk 400 G2 迷你型台式电脑 OpenCore 0.8.8 EFI
 
 ![电脑图片](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/PC.png)
 
@@ -35,7 +35,7 @@
 |   配置   |                             参数                             |
 | :------: | :----------------------------------------------------------: |
 |   设备   | [HP ProDesk 400 G2 迷你型台式电脑](https://support.hp.com/cn-zh/document/c04864998)  <br />（[HP ProDesk 400 G2 Desktop Mini PC](https://support.hp.com/us-en/document/c04843458)） |
-| 当前系统 |                macOS Monterey 12.6.1 (21G217)                |
+| 当前系统 |                macOS Monterey 12.6.2 (21G320)                |
 |   CPU    |       Intel<sup>®</sup> Core™ i5-6600T @ 2.70GHz 4C4T        |
 |   显卡   |               Intel HD Graphics 530 @ 1.10GHz                |
 |   内存   |               杂牌DDR4 2133MHz 8GB × 2 双通道                |
@@ -44,7 +44,7 @@
 |   声卡   |                        Realtek ALC221                        |
 |  SMBIOS  |                       Mac mini (2018)                        |
 |   BIOS   |                        N23 Ver 02.58                         |
-|   引导   |                        OpenCore 0.8.6                        |
+|   引导   |                        OpenCore 0.8.8                        |
 
 ![系统](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/桌面.png)
 
@@ -142,8 +142,8 @@
 
 * 关闭Secure Boot
 * 关闭Fast Boot
-* 关闭VT-d，或在`config.plist`中将`Root/Kernel/Quirks/DisableIoMapper`项设为`True`（在系统升级、系统安装等过程中必须关闭VT-d，否则有几率卡苹果）
-* 关闭所有Power Management选项
+* ~~关闭VT-d，或在`config.plist`中将`Root/Kernel/Quirks/DisableIoMapper`项设为`True`（在系统升级、系统安装等过程中必须关闭VT-d，否则有几率卡苹果）~~  OpenCore 0.8.8及之后的EFI不需要关闭VT-d
+* ~~关闭所有Power Management选项~~
 * 显存分配至少为64MB
 
 ## 截图
