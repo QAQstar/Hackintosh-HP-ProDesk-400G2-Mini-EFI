@@ -1,12 +1,12 @@
-# HP ProDesk 400 G2 迷你型台式电脑 OpenCore 0.8.8 EFI
+# HP ProDesk 400 G2 迷你型台式电脑 OpenCore 0.9.1 EFI
 
-![电脑图片](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/PC.png)
+![电脑图片](https://github.com/QAQstar/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/PC.png)
 
 ## MacOS 13 Ventura 适配中
 
-正在调整
+闪屏问题难以解决，在2K@60Hz及更低分辨率下似乎正常，4K及更高分辨率下会闪屏，有能力的小伙伴请自行尝试。
 
-![Ventura_beta](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/macOS_13_beta.jpg)
+![Ventura_beta](https://github.com/QAQstar/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/macOS_13_beta.jpg)
 
 ## 随便说点
 
@@ -18,7 +18,7 @@
 
 后来大佬把机子卖了，想升级OpenCore又不敢自己乱搞，有天在GitHub上看到有个外国老哥分享自己0.7.2的EFI，我就把他的引导和我手头的引导杂糅了一下，不确定的就翻OpenCore文档，开始了自己慢慢琢磨配置文件之路。
 
-总之整个折腾黑苹果的过程是非常有意思的，有一起交流折腾经验的朋友可以[加我QQ](https://raw.githubusercontent.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/master/img/QQ.png)。
+总之整个折腾黑苹果的过程是非常有意思的，有一起交流折腾经验的朋友可以[加我QQ](https://raw.githubusercontent.com/QAQstar/Hackintosh-HP-ProDesk-400G2-Mini-EFI/master/img/QQ.png)。
 
 ## 注意事项
 
@@ -35,18 +35,18 @@
 |   配置   |                             参数                             |
 | :------: | :----------------------------------------------------------: |
 |   设备   | [HP ProDesk 400 G2 迷你型台式电脑](https://support.hp.com/cn-zh/document/c04864998)  <br />（[HP ProDesk 400 G2 Desktop Mini PC](https://support.hp.com/us-en/document/c04843458)） |
-| 当前系统 |                macOS Monterey 12.6.2 (21G320)                |
+| 当前系统 |                macOS Monterey 12.6.4 (21G526)                |
 |   CPU    |       Intel<sup>®</sup> Core™ i5-6600T @ 2.70GHz 4C4T        |
 |   显卡   |               Intel HD Graphics 530 @ 1.10GHz                |
 |   内存   |               杂牌DDR4 2133MHz 8GB × 2 双通道                |
 |   硬盘   | SSD: TOSHIBA RC500 500GB  <br />HDD: HGST HTS545050A7E380 500GB |
-|   网卡   | Wired: Realtek RTL8111HSH-CG GbE  <br />Wireless: Broadcom BCM943224PCIEBT2 |
+|   网卡   | Wired: Realtek RTL8111HSH-CG GbE  <br />Wireless: Broadcom BCM943224PCIEBT2 (607-9900) |
 |   声卡   |                        Realtek ALC221                        |
 |  SMBIOS  |                       Mac mini (2018)                        |
 |   BIOS   |                        N23 Ver 02.58                         |
-|   引导   |                        OpenCore 0.8.8                        |
+|   引导   |                        OpenCore 0.9.1                        |
 
-![系统](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/桌面.png)
+![系统](https://github.com/QAQstar/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/桌面.png)
 
 ## 食用方法
 
@@ -60,7 +60,7 @@
 
 3. 进入目录`OpenCore-0.8.0-RELEASE/Utilities/macrecovery/`，在该目录中运行cmd，输入`python ./macrecovery.py -b Mac-E43C1C25D4880AD6 -m 00000000000000000 download`（需要python3环境），等待下载完成后在该目录下得到`BaseSystem.dmg`和`BaseSystem.chunklist`两个文件（若需要安装其他版本，参考该目录下的`recovery_urls.txt`文件）
 
-4. 下载[Releases中0.8.0版本](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/releases/tag/0.8.0)的`EFI.zip`文件，并解压到本地。若核显不是HD530，则需要到[英特尔®核芯显卡常见问答](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.IntelHD.cn.md)中找到你核显对应的`platform-id`，并替换`EFI/OC/config.plist`文件中的`Root/DeviceProperties/Add/PciRoot(0x0)/Pci(0x2,0x0)/device-id`项；并将`Root/DeviceProperties/Add/PciRoot(0x0)/Pci(0x2,0x0)/AAPL,ig-platform-id`项修改为`platform-id`的反转字节形式（如`platform-id`为`3EA50009`，则`AAPL,ig-platform-id`项修改为`0900A53E`）
+4. 下载[Releases中0.8.0版本](https://github.com/QAQstar/Hackintosh-HP-ProDesk-400G2-Mini-EFI/releases/tag/0.8.0)的`EFI.zip`文件，并解压到本地。若核显不是HD530，则需要到[英特尔®核芯显卡常见问答](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.IntelHD.cn.md)中找到你核显对应的`platform-id`，并替换`EFI/OC/config.plist`文件中的`Root/DeviceProperties/Add/PciRoot(0x0)/Pci(0x2,0x0)/device-id`项；并将`Root/DeviceProperties/Add/PciRoot(0x0)/Pci(0x2,0x0)/AAPL,ig-platform-id`项修改为`platform-id`的反转字节形式（如`platform-id`为`3EA50009`，则`AAPL,ig-platform-id`项修改为`0900A53E`）
 
 5. 准备一个至少4GB的U盘，最好是USB3.0的，格式化成FAT32文件系统，将第5步中准备好的`EFI`文件夹拷贝到U盘根目录和硬盘的引导分区
 
@@ -80,17 +80,17 @@
     ```
 
 9. 将U盘插入到主机上，选择U盘启动，在看到引导界面时按下空格，选择`macOS Recovery (dmg)`启动项，即下图中被选中的启动项：
-    ![recovery_boot](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/recovery_boot.png)
+    ![recovery_boot](https://github.com/QAQstar/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/recovery_boot.png)
 
 9. 点击`磁盘工具`，将第1步中的空闲分区格式化成APFS格式，然后退出磁盘工具
 
 10. 点击`重新安装macOS`，并将macOS安装到第9步创建的分区中，等待安装过程
 
 11. 结束安装后，从硬盘启动即可进入到macOS，注意不要登录Apple ID，还需要注入新的三码，可参考[OpenCore生成三码](https://heipg.cn/tutorial/macserial-and-iservice-opencore.html)和[国光的PlatformInfo配置说明](https://apple.sqlsec.com/4-OC配置/4-7.html)。完成macOS初始化设置后下载Releases中0.7.4版本的`OCC.zip`（或使用[Hackintool](https://github.com/headkaze/Hackintool/releases)、[OCAuxiliaryTools](https://github.com/ic005k/QtOpenCoreConfig/releases)等app，建议使用OCAuxiliaryTools，个人认为比较好用），解压到本地后双击打开；在菜单栏中选中单击应用图标，点击`挂载分区`，输入密码后再点击`打开分区`，进入引导分区；双击打开`EFI/OC/config.plist`文件，在PlatformInfo设置中生成新的三码，并按下`Command+S`或点击左上角`文件-保存`即可。以OpenCore Configurator为例，过程可见下图：  
-    ![挂载引导分区](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/挂载分区.png)  
-    ![打开引导分区](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/打开分区.png)  
-    ![打开config.plist文件](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/config文件.png) 
-    ![注入新的三码](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/注入三码.png)  
+    ![挂载引导分区](https://github.com/QAQstar/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/挂载分区.png)  
+    ![打开引导分区](https://github.com/QAQstar/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/打开分区.png)  
+    ![打开config.plist文件](https://github.com/QAQstar/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/config文件.png) 
+    ![注入新的三码](https://github.com/QAQstar/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/注入三码.png)  
 
 12. 重启电脑，在OpenCore引导界面中按下空格，选择`Reset NVRAM`；自动重启后再次进入到macOS系统，即可登录Apple ID
 
@@ -112,7 +112,7 @@
 
 * DP转HDMI主动转换器工作正常
 
-* 输出使用[**主动式DP转HDMI转换器**](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/DP_to_HDMI_Adapter.png)时睡眠正常（比较挑线，必须是主动式DP转HDMI+显示器HDMI接口）（请在终端中运行以下代码，`系统偏好设置-节能`中进行如下设置，以设置好睡眠条件，其他条件下的睡眠功能请自行测试）
+* 输出使用[**主动式DP转HDMI转换器**](https://github.com/QAQstar/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/DP_to_HDMI_Adapter.png)时睡眠正常（比较挑线，必须是主动式DP转HDMI+显示器HDMI接口）（请在终端中运行以下代码，`系统偏好设置-节能`中进行如下设置，以设置好睡眠条件，其他条件下的睡眠功能请自行测试）
 
     ```shell
     sudo pmset -a hibernatemode 0
@@ -136,7 +136,7 @@
 ## 未详细测试
 
 * 2.4G Wi-Fi和蓝牙同时使用可能存在干扰，据说将2.4G Wi-Fi信道换成1/4/11可以缓解，彻底解决可能性不大
-* 在某些条件下使用DP线时睡眠后唤醒失败（似乎和显示器有关系，因为使用DP诱骗器时睡眠正常，但无额外显示器用于测试），由于本人精力有限，后续将不会占用过多时间解决该问题，有精力的朋友可以自行尝试解决，如解决了欢迎提issue或[联系我](https://raw.githubusercontent.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/master/img/QQ.png)
+* 在某些条件下使用DP线时睡眠后唤醒失败（似乎和显示器有关系，因为使用DP诱骗器时睡眠正常，但无额外显示器用于测试），由于本人精力有限，后续将不会占用过多时间解决该问题，有精力的朋友可以自行尝试解决，如解决了欢迎提issue或[联系我](https://raw.githubusercontent.com/QAQstar/Hackintosh-HP-ProDesk-400G2-Mini-EFI/master/img/QQ.png)
 
 ## BIOS设置
 
@@ -148,11 +148,11 @@
 
 ## 截图
 
-![OpenCore界面](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/OpenCore.png)
+![OpenCore界面](https://github.com/QAQstar/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/OpenCore.png)
 
-![GeekBench5跑分](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/GeekBench5.png)
+![GeekBench5跑分](https://github.com/QAQstar/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/GeekBench5.png)
 
-![H265硬解](https://github.com/978025302/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/H265硬解.png)
+![H265硬解](https://github.com/QAQstar/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/H265硬解.png)
 
 ## 参考
 
