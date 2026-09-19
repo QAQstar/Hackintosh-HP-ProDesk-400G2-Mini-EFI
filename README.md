@@ -1,4 +1,4 @@
-# HP ProDesk 400 G2 迷你型台式电脑 OpenCore 0.9.1 EFI
+# HP ProDesk 400 G2 迷你型台式电脑 OpenCore 1.0.7 EFI
 
 ![电脑图片](https://github.com/QAQstar/Hackintosh-HP-ProDesk-400G2-Mini-EFI/raw/master/img/PC.png)
 
